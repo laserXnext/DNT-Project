@@ -1,0 +1,569 @@
+*
+{
+    margin:0%;
+    padding:0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: url("/background/2.png");
+    background-position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.nav 
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    background: #eeeff0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 20;
+}
+.nav-item:hover,
+#nav-tool
+{
+    background-color: #F94D1C;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+}
+.nav-logo
+{
+    display: flex;
+    width: 64px;
+    height: 64px;
+}
+.nav,.nav-links 
+{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    list-style: none;
+}
+a 
+{
+    color: #242c3f;
+    text-decoration: none;
+}
+.search-icon 
+{
+    color: #242c3f;
+    font-size: 20px;
+    cursor: pointer;
+}
+.search-box 
+{
+    position: absolute;
+    right:90px;
+    height: 45px;
+    max-width: 300px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+}
+.nav.openSearch .search-box 
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-box .search-icon 
+{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    color: #242c3f;
+    transform: translateY(-50%);
+}
+.search-box input 
+{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+    transition: all 0.2s linear;
+}
+.navOpenBtn,
+.navCloseBtn 
+{
+    display: none;
+}
+
+.main-text
+{
+    position: relative;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #242c3f;
+    z-index: 1;
+    padding-bottom: 30px;
+}
+.text-1
+{
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+}
+.text-2
+{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+}
+.tools
+{
+    padding-bottom: 50px;
+    z-index: 1;
+}
+.tool-ex 
+{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    height: fit-content;
+    align-items: start;
+    background-color: #eeeff0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.toolimg-ex 
+{
+    flex: 1 0 auto;
+    max-width: 25%;
+    border-radius:10px ;
+}
+.tool-name
+{
+    font-size: 25px;
+    font-family: "Madimi One",sans-serif;
+    color: #242c3f;
+    margin-top: 20px;
+    text-align: left;
+    padding-bottom:10px ;
+}
+
+.details 
+{
+    font-family: sans-serif;
+    padding: 0 30px;
+    text-align: justify;
+    word-spacing: 1.5px;
+}
+.tool-desc 
+{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.time-list ,
+.price-list  
+{
+    position: relative;
+    padding-top: 20px;
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+
+.time-list li
+{
+    margin: 0 50px;
+    font-size: 24px;
+    font-family: "Lilita One", sans-serif;
+    color: #1f3c81;
+}
+
+.price-list li
+{
+    margin: 0 40px;
+    font-size: 21px;
+    font-family: "Nunito Sans" ,sans-serif;
+    color: #da8332;
+}
+.more-data 
+{
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 20;
+    font-family: "Nunito Sans" ,sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+.more-data:hover 
+{
+    background-color: #0056b3;
+}
+.footer 
+{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.footer-logo 
+{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    padding: 10px;
+}
+
+.footer-text 
+{
+    max-width: 90%;
+    left: 5%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #242c3f;
+    font-family: sans-serif;
+}
+
+.socialmedia-list 
+{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.socialmedia-list li 
+{
+    margin: 0 15px;
+    font-size: 35px;
+    color: #242c3f;
+    transition: color 0.3s;
+}
+
+.service-tag 
+{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-family: "Lilita One", sans-serif;
+    color: #F94D1C;
+}
+
+.service-list 
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.service-list li 
+{
+    margin:10px;
+    font-size: 18px;
+    color: #242c3f;
+    font-family: "Madimi One", sans-serif;
+}
+.footer-bottom
+{
+    border-top: solid #242c3f;
+    padding: 5px;
+    border-width: 2px;
+    text-align: center;
+    font-size: small;
+    font-family:sans-serif;
+}
+.linkedin
+{
+    font-size: 38px;
+}
+.facebook:hover 
+{
+    color: #3b5998;
+}
+.whatsapp:hover 
+{
+    color: #25D366;
+}
+.linkedin:hover 
+{
+    color: #0e76a8;
+}
+@media screen and (max-width: 1366px)
+{
+    .search-box 
+    {
+        max-width: 250px;
+    }
+}
+@media screen and (max-width: 1200px) 
+{
+    .nav 
+    {
+        padding: 15px 80px;
+    }
+    .nav .search-box 
+    {
+        right: 150px;
+    }
+    .nav .search-box 
+    {
+        top: calc(100% + 10px);
+        max-width: calc(100% - 20px);
+        right: 50%;
+        transform: translateX(50%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .main-text 
+    {
+        top: 17%;
+    }
+    .tools 
+    {
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 950px) 
+{
+    .nav 
+    {
+        padding: 15px 50px;
+    }
+    .time-list,
+    .price-list 
+    {
+        padding-top: 5px;
+        font-size: 16px;
+        list-style: none;
+        margin: 0;
+    }
+    .time-list li
+    {
+        margin: 0 28px;
+        font-size: 24px;
+        font-family: "Lilita One", sans-serif;
+        color: #1f3c81;
+    }
+
+    .price-list li
+    {
+        margin: 0 18px;
+        font-size: 21px;
+        font-family: "Nunito Sans" ,sans-serif;
+        color: #da8332;
+    }
+    .main-text
+    {
+        top: 17%;
+    }
+}
+@media screen and (max-width: 768px) 
+{
+    .nav 
+    {
+        padding: 15px 20px;
+        z-index: 9;
+    }
+    .navOpenBtn,
+    .navCloseBtn 
+    {
+        display: block;
+    }
+    .nav-links 
+    {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height:fit-content;
+        max-width: 280px;
+        width: 32%;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        row-gap: 30px;
+        flex-direction: column;
+        background-color:#eeeff0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.4s ease;
+        border-bottom-right-radius:50px ;
+        z-index: 10;
+    }
+    .nav-item:hover,
+    #nav-tool
+    {
+        background-color: #eeeff0;
+        color: #F94D1C;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .nav.openNav .nav-links 
+    {
+        left: 0;
+    }
+    .navOpenBtn 
+    {
+        color: #242c3f;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav .navCloseBtn 
+    {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #242c3f;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav .search-box 
+    {
+        top: calc(100% + 10px);
+        max-width: calc(100% - 20px);
+        right: 50%;
+        transform: translateX(50%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s linear;
+    }
+    .main-text 
+    {
+        top: 18%;
+        padding-bottom: 50px;
+    }
+    .tools
+    {
+        position: relative;
+        top: 0%;
+        right: 0%;
+    }
+    .tool-ex 
+    {
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #eeeff0;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        height: fit-content;
+    }
+
+    .toolimg-ex 
+    {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .tool-name 
+    {
+        font-size: 20px;
+        font-family: "Madimi One", sans-serif;
+        color: #242c3f;
+        margin-top: 10px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    .details 
+    {
+        font-family: sans-serif;
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    .tool-desc 
+    {
+        font-size: 16px;
+        margin-top: 10px;
+        max-width: 75%;
+    }
+
+    .pricing 
+    {
+        justify-content: space-between;
+    }
+
+    .time-list,
+    .price-list 
+    {
+        right: 25%;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 16px;
+        list-style: none;
+    }
+    .more-data 
+    {
+        padding: 5px;
+        background-color: #007BFF;
+        color: #fff;
+        font-size: 16px;
+        font-family: "Nunito Sans", sans-serif;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .more-data:hover 
+    {
+        background-color: #0056b3;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .main-text
+    {
+        top:20%;
+    }
+    .tools
+    {
+        padding-left: 0%;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .nav,
+    .footer 
+    {
+        width: 480px;
+    }
+    .main-text
+    {
+        top:13%;
+        margin-left: 5%;
+    }
+    .tools
+    {
+        width: 430px;
+        margin: 5%;
+    }
+}
